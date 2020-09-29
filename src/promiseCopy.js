@@ -7,9 +7,9 @@ import fs from 'fs/promises'
 console.log('START OF PROGRAM')
 
 try {
-    let stats = await fs.stat('file1.txt')
+    let stats = await fs.stat('./file1.txt')
     if (stats.isFile()) {
-        await fs.copyFile('file1.txt', 'file2.txt')
+        await fs.copyFile('./file1.txt', './file2.txt')
         console.log(
             'file1.txt was copied to file2.txt asynchronously with a promise'
         )

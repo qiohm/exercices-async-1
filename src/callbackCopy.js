@@ -4,9 +4,12 @@ utilisant les api asynchrones basées sur des callbacks du module fs de node.js.
 */
 import fs from 'fs'
 
+//envoie une erreur si fichier file2.txt existe deja, pour ne pas overwrite
+const { COPYFILE_EXCL } = fs.constants
+
 console.log('START OF PROGRAM')
 
-fs.copyFile('file1.txt', 'file2.txt', (err) => {
+fs.copyFile('./file1.txt', './file2.txt', COPYFILE_EXCL, (err) => {
     if (err) console.error(err)
     else
         console.log(

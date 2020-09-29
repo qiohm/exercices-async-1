@@ -27,7 +27,7 @@ if (!process.argv[2].includes('.') || !process.argv[3].includes('.')) {
 //securite pour s'assurer que les fichiers rentres comme arguments ont la meme extension
 if (
     process.argv[2].slice(process.argv[2].indexOf('.')) !==
-    process.argv[3].slice(process.argv[2].indexOf('.'))
+    process.argv[3].slice(process.argv[3].indexOf('.'))
 ) {
     console.log(
         'Error: please enter 2 files ending with the same .extension (ex. .txt, .js)'
@@ -45,7 +45,7 @@ try {
         console.log(
             'file1.txt was copied to file2.txt asynchronously with a promise and command line process.argv'
         )
-    }
+    } else console.log("Erreur: file src n'est pas un fichier")
 } catch (e) {
     console.error(e)
 }

@@ -7,7 +7,7 @@ import fs from 'fs'
 console.log('START OF PROGRAM')
 
 try {
-    fs.copyFileSync('file1.txt', 'file2.txt')
+    fs.copyFileSync('./file1.txt', './file2.txt')
     console.log('file1.txt was copied to file2.txt synchronously')
 } catch (e) {
     console.error(e)
